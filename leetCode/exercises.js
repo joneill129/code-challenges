@@ -1,4 +1,4 @@
-//1. Given the array nums consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn].
+//1. EASY - Given the array nums consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn].
 // Return the array in the form [x1,y1,x2,y2,...,xn,yn].
 
 // Constraints:
@@ -20,7 +20,7 @@ const shuffle = function(nums, n) {
 
 /************************************/
 
-// 2. Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+// 2. EASY - Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
 // You can return the answer in any order.
 
@@ -46,3 +46,25 @@ const twoSum = (nums, target) => {
 
 // Runtime: 84 ms
 // Memory Usage: 41.5 MB
+
+/*********************************/ 
+
+// 3. EASY - Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+// Return the running sum of nums.
+
+// Constraints:
+// 1 <= nums.length <= 1000
+// -10^6 <= nums[i] <= 10^6
+
+const runningSum = function(nums) {
+    let result = []
+    let sum = 0
+    nums.forEach(function(num){
+       sum = sum + num
+        result.push(sum)
+    })
+    return result;
+};
+
+// Runtime: 80 ms
+// Memory Usage: 39.1 MB
